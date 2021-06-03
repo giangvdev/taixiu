@@ -1,0 +1,96 @@
+.register {
+    background-image: url(https://gamedoithuong2019.com/wp-content/uploads/2019/12/iwin-66-club-1.jpg);
+    background-size: cover;
+    height: 836px;
+}
+
+.account input {
+    font-size: 16px;
+    background: #1c0324;
+    border-radius: 10px;
+    padding: 10px 50px 10px 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #f7efb6;
+    color: white;
+}
+
+.password input {
+    font-size: 16px;
+    background: #1c0324;
+    border-radius: 10px;
+    padding: 10px 50px 10px 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #f7efb6;
+    color: white;
+}
+
+i.icon__account {
+    position: absolute;
+    color: white;
+    top: 20px;
+    left: 17%;
+}
+
+.account {
+    position: relative;
+}
+
+i.icon__password {
+    position: absolute;
+    color: white;
+    top: 20px;
+    left: 17%;
+}
+
+.password {
+    position: relative;
+}
+
+.form__register {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    top: 45%;
+}
+
+button.btn-account {
+    background: #602e73;
+    border-radius: 23px;
+    padding: 10px 40px 10px 40px;
+    margin-right: 17px;
+    color: #ffe7b7;
+    font-weight: bold;
+    border: 5px solid #3d0a51;
+}
+
+button.btn-password {
+    background: #8e632c;
+    border-radius: 23px;
+    padding: 10px 47px 10px 47px;
+    margin-right: 17px;
+    color: #ffe7b7;
+    font-weight: bold;
+    border: 5px solid #3d0a51;
+}
+i.icon__password-btn {
+    color: #4d3c0c;
+    padding-top: 10px;
+}
+.logo__register {
+    width: 41%;
+    position: absolute;
+    bottom: 95%;
+    left: 30%;
+}
+
+.style__input-register {
+    background-color: #190223;
+    padding: 18px;
+    border-radius: 19px;
+    border: 6px solid #cda959;
+    color: #fff;
+}
+
