@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Controller } from "react-hook-form";
+
 import { Input } from "antd";
 
 InputField.propTypes = {
@@ -11,12 +11,25 @@ InputField.propTypes = {
 };
 
 function InputField(props) {
-  const { form, name, label, disabled } = props;
-
-  console.log("form...", form);
+  const { register, name, required, maxLength, setError, errors, label} = props;
 
   return (
-    <Controller name={name} control={form.control} label={label} as={} />
+<>
+
+<input
+label={label}
+placeholder={label}
+onChange={(e) => {
+  setError(name, {
+    type: "maxLength",
+    message: "Dont Forget Your Username Should Be Cool!"
+  });
+  // onChange(e);
+}}
+ {...register(name, { required: required, maxLength: maxLength })} />
+{errors ? <span>{errors[name]?.message}</span> : ''}
+
+</>
   );
 }
 

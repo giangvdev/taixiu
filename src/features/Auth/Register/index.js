@@ -5,6 +5,7 @@ import LockIcon from "@material-ui/icons/Lock";
 import RegisterForm from "./registerForm";
 import { Button } from "antd";
 import Modal from "antd/lib/modal/Modal";
+import { useUpdateProfile } from "../hook";
 
 const Register = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -20,6 +21,8 @@ const Register = () => {
   const handleCancel = () => {
     setIsModalVisible(false);
   };
+
+  const [handleRegister] = useUpdateProfile()
 
   const handleFormSubmit = (values) => {
     console.log("values.......", values);
@@ -66,7 +69,7 @@ const Register = () => {
           onOk={handleOk}
           onCancel={handleCancel}
         >
-          <RegisterForm onSubmit={handleFormSubmit} />
+          <RegisterForm onSubmit={handleFormSubmit} handleRegister={handleRegister} />
         </Modal>
       </>
     </div>

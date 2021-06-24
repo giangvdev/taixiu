@@ -11,25 +11,72 @@ RegisterForm.propTypes = {
 
 function RegisterForm(props) {
 
+  const {handleRegister} = props
 
-  const form = useForm({
+  const { register ,handleSubmit, defaultValues , setError, formState: { errors }} = useForm({
     defaultValues: {
-      fullname: "",
-      email: "",
-      passWord: "",
-    },
-  });
+      fullname: '',
+      username: '' ,
+      email: '',
+      password: '',
+      retypepassWord: '',
+    }
+  })
 
-  const handleSubmit = (values) => {
-      console.log("dcm.....")
-  };
+  const onSubmit = (data) => {
+      handleRegister(data)
+      console.log('data....',data)
+  }
+
+  // console.log('err...', errors)
 
   return (
-      <form onSubmit={form.handleSubmit(handleSubmit)}>
-        <InputField name="fullname" label="full name" form={form} />
-        <InputField name="email" label="email" form={form} />
-      </form>
+    <form onSubmit={handleSubmit(onSubmit)} className="form-taikhoan">
+      <InputField
+        register={register}
+        name='fullname'
+        required={true}
+        setError={setError}
+        errors={errors}
+        label="ten"
+      />
+        <InputField
+        register={register}
+        name='email'
+        required={true}
+        setError={setError}
+        errors={errors}
+        label="email"
+      />
+        <InputField
+        register={register}
+        name='username'
+        required={true}
+        setError={setError}
+        errors={errors}
+        label="username"
+      />
+        <InputField
+        register={register}
+        name='password'
+        required={true}
+        setError={setError}
+        errors={errors}
+        label="password"
+      />
+        <InputField
+        register={register}
+        name='retypepassWord'
+        required={true}
+        setError={setError}
+        errors={errors}
+        label="retypepassWord"
+      />
+    
+      <button type="submit">Submit</button>
+    </form>
   );
 }
+
 
 export default RegisterForm;
